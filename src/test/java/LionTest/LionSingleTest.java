@@ -43,14 +43,13 @@ public class LionSingleTest {
 
 
     @Test
-    public void doesHaveManeThrowsCorrectErrorWhenInvalidSex() throws Exception {
+    public void constructorThrowsCorrectErrorWhenInvalidSex() throws Exception {
         String sex = "Боевой вертолет";
-        Lion lion = new Lion(mockFeline, sex);
         String expected = "Используйте допустимые значения пола животного";
         String reason = String.format("Error message when animal sex is invalid should contain \"%s\"", expected);
 
         try {
-            lion.doesHaveMane();
+            new Lion(mockFeline, sex);
         } catch (Exception e) {
             String actual = e.getMessage();
 
