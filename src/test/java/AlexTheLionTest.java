@@ -1,5 +1,3 @@
-package AlexTheLionTest;
-
 import com.example.AlexTheLion;
 import com.example.Feline;
 import org.hamcrest.MatcherAssert;
@@ -12,7 +10,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.CoreMatchers.is;
 
-public class AlexTheLionSingleTest {
+public class AlexTheLionTest {
 
 
     @Mock
@@ -38,6 +36,7 @@ public class AlexTheLionSingleTest {
         String expected = "Нью-Йоркский зоопарк";
 
         String actual = alex.getPlaceOfLiving();
+
         MatcherAssert.assertThat("Alex lives in New York zoo",
                 actual, is(expected));
     }

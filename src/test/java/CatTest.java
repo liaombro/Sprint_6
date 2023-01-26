@@ -1,5 +1,3 @@
-package CatTest;
-
 import com.example.Cat;
 import com.example.Feline;
 import org.hamcrest.MatcherAssert;
@@ -13,7 +11,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.hamcrest.CoreMatchers.is;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CatSingleTest {
+public class CatTest {
 
     @Mock
     Feline mockFeline;
@@ -31,13 +29,13 @@ public class CatSingleTest {
     }
 
 
-   @Test
-   public void getFoodMethodCallsPredatorInterface() throws Exception {
+    @Test
+    public void getFoodMethodCallsPredatorInterface() throws Exception {
         Cat cat = new Cat(mockFeline);
 
         cat.getFood();
 
         Mockito.verify(mockFeline).eatMeat();
-   }
+    }
 
 }
